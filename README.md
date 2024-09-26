@@ -1,50 +1,25 @@
-# React + TypeScript + Vite
+# Control de Gastos y Presupuestos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción
 
-Currently, two official plugins are available:
+Este proyecto es una aplicación para el control de gastos y presupuestos, desarrollada con **TypeScript**. Utiliza **useReducer** y **Context API** para gestionar un estado global sin dependencias, lo que permite evitar el paso de props a través de múltiples componentes. La aplicación incluye funcionalidades como el filtrado de gastos por categoría, un calendario para registrar fechas de gastos, gráficos para visualizar datos y mucho más.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologías Utilizadas
 
-## Expanding the ESLint configuration
+- **TypeScript**: Un superconjunto de JavaScript que agrega tipos estáticos.
+- **React**: Biblioteca de JavaScript para construir interfaces de usuario.
+- **useReducer**: Hook de React para manejar el estado complejo.
+- **Context API**: Proporciona una forma de pasar datos a través del árbol de componentes sin tener que pasar props manualmente a cada nivel.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Librerías Adicionales
 
-- Configure the top-level `parserOptions` property like this:
+- [react-circular-progressbar](https://www.npmjs.com/package/react-circular-progressbar): Para mostrar el progreso de los gastos de manera visual.
+- [react-date-picker](https://www.npmjs.com/package/react-date-picker): Para seleccionar fechas de gastos fácilmente.
+- [react-swipeable-list](https://www.npmjs.com/package/react-swipeable-list): Para manejar listas de gastos que se pueden deslizar para acciones adicionales.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Funcionalidades
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **Filtrado de gastos por categoría**: Organiza y visualiza tus gastos por distintas categorías.
+- **Calendario de fechas de gastos**: Registra y consulta tus gastos en un calendario.
+- **Gráficas**: Visualiza tus gastos y presupuestos de forma gráfica.
+- **Estado global**: Utiliza Context API para un manejo eficiente del estado en toda la aplicación.
